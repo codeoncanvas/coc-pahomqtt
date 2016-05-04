@@ -1,89 +1,129 @@
 #pragma once
 
+#include "cinder/Log.h"
+#include "cinder/Utilities.h"
+
 #include "client.h"
 #include "connect_options.h"
 #include "message.h"
 #include "exception.h"
 
-#define ADDRESS     "tcp://localhost:1883"
-#define CLIENTID    "ExampleClientPub"
-#define TOPIC       "MQTT Examples"
-#define PAYLOAD1     "Hello World 1!"
-#define PAYLOAD2     "Hello World 2!"
-#define PAYLOAD3     "Hello World 3!"
 #define QOS         1
 
 
 namespace coc {
     
+    class callback : public virtual mqtt::callback
+    {
+    public:
+        virtual void connection_lost(const std::string& cause) {
+            std::cout << "\nConnection lost" << std::endl;
+            if (!cause.empty())
+                std::cout << "\tcause: " << cause << std::endl;
+        }
+        
+        // We're not subscrived to anything, so this should never be called.
+        virtual void message_arrived(const std::string& topic, mqtt::message_ptr msg) {
+        }
+        
+        virtual void delivery_complete(mqtt::idelivery_token_ptr tok) {
+            std::cout << "\n\t[Delivery complete for token: "
+            << (tok ? tok->get_message_id() : -1) << "]" << std::endl;
+        }
+    };
     
-    class cocPahoMqtt {
+    
+    class cocPahoMqtt : mqtt::callback {
         
     public:
+
         
-        void setup() {
+        void connect( std::string address, int port, std::string clientId) {
+            
+            
+            std::string addressStr = address + ":" + ci::toString(port);
+            mClient = new mqtt::client(addressStr.c_str(), clientId.c_str() );
 
-            //todo: suss persist dir as 3rd arg
-            mqtt::client client(ADDRESS, CLIENTID );
-
-
-            //todo: get callback working
-//            mqtt::callback cb;
-//            client.set_callback(cb);
+            
+            //CALLBACKS
+            
+            mClient->set_callback(mCb);
+            
             
             mqtt::connect_options connOpts;
             connOpts.set_keep_alive_interval(20);
             connOpts.set_clean_session(true);
             
             try {
-                std::cout << "Connecting..." << std::flush;
-                client.connect(connOpts);
-                std::cout << "OK" << std::endl;
-                
-                // First use a message pointer.
-                
-                std::cout << "Sending message..." << std::flush;
-                mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD1);//was mqtt::message_ptr pubmsg = std::make_shared(PAYLOAD1);
-                pubmsg->set_qos(QOS);
-                client.publish(TOPIC, pubmsg);
-                std::cout << "OK" << std::endl;
-                
-                // Now try with itemized publish.
-                
-                std::cout << "Sending next message..." << std::flush;
-                client.publish(TOPIC, PAYLOAD2, strlen(PAYLOAD2)+1, 0, false);
-                std::cout << "OK" << std::endl;
-                
-                // Now try with a listener, but no token
-                
-                std::cout << "Sending final message..." << std::flush;
-                pubmsg = std::make_shared<mqtt::message>(PAYLOAD3);//was pubmsg = std::make_shared(PAYLOAD3);
-                pubmsg->set_qos(QOS);
-                client.publish(TOPIC, pubmsg);
-                std::cout << "OK" << std::endl;
-                
-                // Disconnect
-                std::cout << "Disconnecting..." << std::flush;
-                client.disconnect();
-                std::cout << "OK" << std::endl;
+                mClient->connect(connOpts);
+                CI_LOG_I( "Connected" );
             }
             catch (const mqtt::persistence_exception& exc) {
-                std::cerr << "Persistence Error: " << exc.what() << " ["
-                << exc.get_reason_code() << "]" << std::endl;
-//                return 1;
+                CI_LOG_E( "Persistence Error: " << exc.get_message() << " ["
+                         << exc.get_reason_code() << "]");
             }
             catch (const mqtt::exception& exc) {
-                std::cerr << "Error: " << exc.what() << " ["
-                << exc.get_reason_code() << "]" << std::endl;
-//                return 1;
+                CI_LOG_E( "Error: " << exc.get_message() << " ["
+                << exc.get_reason_code() << "]");
             }
-            
-//            return 0;
+            catch ( ... ) {
+                CI_LOG_E( "Connect Failed" );
+            }
         }
         
-        void update() {
+        void disconnect() {
+            if (!mClient->is_connected()) return;
+            mClient->disconnect();
+            CI_LOG_I( "Disonnected" );
+        }
+        
+        //mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD1);//was mqtt::message_ptr pubmsg = std::make_shared(PAYLOAD1);
+        void sendMessage( std::string topic, mqtt::message_ptr pubmsg, bool listen = true ) {
+            
+            if (!mClient->is_connected()) return;
+            
+            //use a message pointer.
+            
+            if (listen) pubmsg->set_qos(QOS);
+            mClient->publish(topic.c_str(), pubmsg);
+            CI_LOG_V("Sent message");
+
+        }
+        
+        void sendMessage( std::string topic, std::string payload ) {
+            
+            if (!mClient->is_connected()) return;
+            
+            // with itemized publish.
+            
+            CI_LOG_V("Sending message...");
+            mClient->publish(topic.c_str(), payload.c_str(), payload.size()+1, 0, false);
+            CI_LOG_V("Sent message");
+            
             
         }
+        
+    private:
+        
+        // CALLBACKS
+        
+        void connection_lost(const std::string& cause) {
+            std::cout << "\nConnection lost" << std::endl;
+            if (!cause.empty())
+                std::cout << "\tcause: " << cause << std::endl;
+        }
+        
+        // We're not subscrived to anything, so this should never be called.
+        void message_arrived(const std::string& topic, mqtt::message_ptr msg) {
+        }
+        
+        void delivery_complete(mqtt::idelivery_token_ptr tok) {
+            std::cout << "\n\t[Delivery complete for token: "
+            << (tok ? tok->get_message_id() : -1) << "]" << std::endl;
+        }
+
+        mqtt::client    *mClient;
+        coc::callback   mCb;
         
     };
 }
