@@ -5,3 +5,5 @@
 /Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/xcode/build/MqttClient.build/Debug/MqttClient.build/Objects-normal/x86_64/message.o
 /Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/xcode/build/MqttClient.build/Debug/MqttClient.build/Objects-normal/x86_64/token.o
 /Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/xcode/build/MqttClient.build/Debug/MqttClient.build/Objects-normal/x86_64/topic.o
+/Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/xcode/build/MqttClient.build/Debug/MqttClient.build/Objects-normal/x86_64/cocPahoMqtt.o
+/Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/xcode/build/MqttClient.build/Debug/MqttClient.build/Objects-normal/x86_64/ciPahoMqtt.o

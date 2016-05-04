@@ -16,6 +16,8 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		1407106472C468B4EBCB2EE3 /* cocPahoMqtt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14071DE10DF880942C8C8D82 /* cocPahoMqtt.cpp */; };
+		1407178635C5F42859C85752 /* ciPahoMqtt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14071B7BB0A8670CE51AA782 /* ciPahoMqtt.cpp */; };
 		140B80CA291746AE8EE99CE0 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = A43E8ED9390346EEB770498A /* CinderApp.icns */; };
 		225431C1E19D4D7F970FDEEC /* topic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A4274FF94A469EA760C62B /* topic.cpp */; };
 		34C66200B31B4DF6AF7C24F6 /* libpaho-mqtt3cs.so.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 13A4A89252E14C9AB227CC67 /* libpaho-mqtt3cs.so.1 */; };
@@ -91,6 +93,9 @@
 		100B1B5087D442EC85256FF5 /* StackTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StackTrace.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/StackTrace.h"; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13A4A89252E14C9AB227CC67 /* libpaho-mqtt3cs.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3cs.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3cs.so.1"; sourceTree = "<group>"; };
+		14071B7BB0A8670CE51AA782 /* ciPahoMqtt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ciPahoMqtt.cpp; path = ../../../src/ciPahoMqtt.cpp; sourceTree = "<group>"; };
+		14071C5D65A57BC2B4D70AC9 /* ciPahoMqtt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ciPahoMqtt.h; path = ../../../src/ciPahoMqtt.h; sourceTree = "<group>"; };
+		14071DE10DF880942C8C8D82 /* cocPahoMqtt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cocPahoMqtt.cpp; path = ../../../src/cocPahoMqtt.cpp; sourceTree = "<group>"; };
 		19E3C8C2DF734161BB9C5CA8 /* token.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = token.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/token.cpp"; sourceTree = "<group>"; };
 		1DC190C743BB4273B9026800 /* libpaho-mqtt3a.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3a.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3a.so.1"; sourceTree = "<group>"; };
 		23E66FA4CDD74A398BC47CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -356,6 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				C162EBDB548444209D1E5B32 /* cocPahoMqtt.h */,
+				14071DE10DF880942C8C8D82 /* cocPahoMqtt.cpp */,
+				14071B7BB0A8670CE51AA782 /* ciPahoMqtt.cpp */,
+				14071C5D65A57BC2B4D70AC9 /* ciPahoMqtt.h */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -470,6 +478,8 @@
 				9FC74F7D8CF04EE99B778F22 /* message.cpp in Sources */,
 				D2DB7BDC402A4193BAA1D1D4 /* token.cpp in Sources */,
 				225431C1E19D4D7F970FDEEC /* topic.cpp in Sources */,
+				1407106472C468B4EBCB2EE3 /* cocPahoMqtt.cpp in Sources */,
+				1407178635C5F42859C85752 /* ciPahoMqtt.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

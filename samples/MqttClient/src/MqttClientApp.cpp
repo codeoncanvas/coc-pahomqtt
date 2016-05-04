@@ -2,9 +2,10 @@
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 
-#include "cocPahoMqtt.h"
+#include "ciPahoMqtt.h"
 
-#define ADDRESS     "tcp://localhost"
+//#define ADDRESS     "tcp://localhost"
+#define ADDRESS		"tcp://iot.eclipse.org"
 #define PORT        1883
 #define CLIENTID    "ExampleClientPub"
 #define TOPIC       "MQTT Examples"
@@ -22,28 +23,36 @@ public:
     void mouseDown( MouseEvent event ) override;
     void update() override;
     void draw() override;
-    
-    coc::cocPahoMqtt    mqtt;
+    void cleanup() override;
+
+    ci::signals::ScopedConnection   cbOnDeliveryComplete;
+
+    void onDeliveryComplete( const mqtt::idelivery_token_ptr  tok);
+
+    coc::ciPahoMqtt    mqtt;
 };
 
 void MqttClientApp::setup()
 {
+
+    cbOnDeliveryComplete =  mqtt.getSignalOnDeliveryComplete().connect( std::bind( &MqttClientApp::onDeliveryComplete, this, std::placeholders::_1 ) );
+
+
+    mqtt.setIsVerbose(true);
     mqtt.connect(ADDRESS,PORT,CLIENTID);
     
     mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD1);
     mqtt.sendMessage( TOPIC, pubmsg);
     
     mqtt.sendMessage( TOPIC, PAYLOAD2);
-    
-    pubmsg = std::make_shared<mqtt::message>(PAYLOAD3);
-    mqtt.sendMessage( TOPIC, pubmsg);
-    
-    mqtt.disconnect();
+
     
 }
 
 void MqttClientApp::mouseDown( MouseEvent event )
 {
+    mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD3);
+    mqtt.sendMessage( TOPIC, pubmsg);
 }
 
 void MqttClientApp::update()
@@ -53,6 +62,17 @@ void MqttClientApp::update()
 void MqttClientApp::draw()
 {
     gl::clear( Color( 0, 0, 0 ) );
+}
+
+void MqttClientApp::cleanup()
+{
+    mqtt.disconnect();
+}
+
+void MqttClientApp::onDeliveryComplete( const mqtt::idelivery_token_ptr tok ) {
+
+    CI_LOG_V( "Delivery complete: " << tok->get_message_id() );
+
 }
 
 CINDER_APP( MqttClientApp, RendererGl )

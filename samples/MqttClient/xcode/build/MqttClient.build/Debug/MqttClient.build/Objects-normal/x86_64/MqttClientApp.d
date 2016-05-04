@@ -1,7 +1,8 @@
 dependencies: \
   /Applications/_coc-libs/coc-pahomqtt/samples/MqttClient/src/MqttClientApp.cpp \
   ../../../../../_cinder/Cinder.git/include/cinder/app/RendererGl.h \
-  /Applications/_cinder/Cinder.git/blocks/coc-pahomqtt/src/cocPahoMqtt.h \
+  /Applications/_coc-libs/coc-pahomqtt/src/ciPahoMqtt.h \
+  /Applications/_coc-libs/coc-pahomqtt/src/cocPahoMqtt.h \
   ../../../../../_cinder/Cinder.git/include/cinder/Log.h \
   ../../../../../_cinder/Cinder.git/include/cinder/System.h \
   ../../../../../_cinder/Cinder.git/include/cinder/Utilities.h \
