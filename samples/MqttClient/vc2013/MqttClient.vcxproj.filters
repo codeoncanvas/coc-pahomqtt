@@ -1,0 +1,187 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Blocks">
+      <UniqueIdentifier>{06962F18-3100-4C05-9672-0A4CC75D7DFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt">
+      <UniqueIdentifier>{5E114196-7908-4AFD-810B-663B52724C45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\src">
+      <UniqueIdentifier>{D4BC2DBE-A540-4D01-97B9-A6E6E8B2398E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs">
+      <UniqueIdentifier>{B035EB3A-77EE-44A1-9A77-54CBF584C0DC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs\PahoMqttC">
+      <UniqueIdentifier>{5C3E4CBF-56E3-4848-A6E3-D1418355B498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs\PahoMqttC\src">
+      <UniqueIdentifier>{DD89AD11-2D9D-4F3F-A0CD-4EBDC101895A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs\PahoMqttCpp">
+      <UniqueIdentifier>{F23F1243-A8A9-4743-AEE9-7677C0B12CB9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src">
+      <UniqueIdentifier>{C0BE3ECD-1165-4396-8F11-CCE6F0F722C7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt">
+      <UniqueIdentifier>{F633A8CE-6182-4DE1-AA51-7E27BA77BD3C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\MqttClientApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MqttClientApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\src\cocPahoMqtt.h">
+      <Filter>Blocks\CoC-PahoMqtt\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Clients.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Heap.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\LinkedList.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Log.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Messages.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTAsync.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTClient.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTClientPersistence.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTPacket.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTPacketOut.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTPersistence.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTPersistenceDefault.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTProtocol.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTProtocolClient.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\MQTTProtocolOut.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Socket.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\SocketBuffer.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\SSLSocket.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\StackTrace.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Thread.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\Tree.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttC\src\utf-8.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttC\src</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\async_client.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\client.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\iclient_persistence.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\message.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\token.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\topic.cpp">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\async_client.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\callback.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\client.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\connect_options.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\delivery_token.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\exception.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\iaction_listener.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\iclient_persistence.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\ipersistable.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\message.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\token.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\_cinder\Cinder.git\blocks\coc-pahomqtt\libs\PahoMqttCpp\src\mqtt\topic.h">
+      <Filter>Blocks\CoC-PahoMqtt\libs\PahoMqttCpp\src\mqtt</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

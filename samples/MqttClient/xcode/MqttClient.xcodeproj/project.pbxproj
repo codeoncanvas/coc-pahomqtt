@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720219952D00008149E2 /* AVFoundation.framework */; };
+		006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006D720319952D00008149E2 /* CoreMedia.framework */; };
+		0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0091D8F80E81B9330029341E /* OpenGL.framework */; };
+		00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784AF0FF439BC000DE1D7 /* Accelerate.framework */; };
+		00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */; };
+		00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B10FF439BC000DE1D7 /* AudioUnit.framework */; };
+		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
+		00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995581B128DF400A5C623 /* IOKit.framework */; };
+		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
+		140B80CA291746AE8EE99CE0 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = A43E8ED9390346EEB770498A /* CinderApp.icns */; };
+		225431C1E19D4D7F970FDEEC /* topic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 06A4274FF94A469EA760C62B /* topic.cpp */; };
+		34C66200B31B4DF6AF7C24F6 /* libpaho-mqtt3cs.so.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 13A4A89252E14C9AB227CC67 /* libpaho-mqtt3cs.so.1 */; };
+		501D55719A064C6F9921F47D /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF761DA55AE841B29CC07A87 /* client.cpp */; };
+		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
+		5857DD03F2114B1B80538717 /* libpaho-mqtt3a.so.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DC190C743BB4273B9026800 /* libpaho-mqtt3a.so.1 */; };
+		7A8BF35DA826440487CBDBDA /* iclient_persistence.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7054308579B840FE81B8730A /* iclient_persistence.cpp */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		91F4B8B50D9C47DC83D59B2E /* async_client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 010D23001C6F45C382EC64B8 /* async_client.cpp */; };
+		9FC74F7D8CF04EE99B778F22 /* message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A42CD63937154D22BAF14C70 /* message.cpp */; };
+		A5D2098C63C346DB8ABAB74F /* libpaho-mqtt3c.so.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D27FC0FF9275489DA42E4A6C /* libpaho-mqtt3c.so.1 */; };
+		CA754B5F6C344A749FFE949A /* libpaho-mqtt3as.so.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 59BE9D401DC3464FA7A095C4 /* libpaho-mqtt3as.so.1 */; };
+		D2DB7BDC402A4193BAA1D1D4 /* token.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19E3C8C2DF734161BB9C5CA8 /* token.cpp */; };
+		FF9C67A3AB1F4EDA979268B5 /* MqttClientApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BDA9398F490445DBB1D4081D /* MqttClientApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		08832C14E94D4609B4A98DF4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				CA754B5F6C344A749FFE949A /* libpaho-mqtt3as.so.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25714CB710D24A4CBB629B03 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				A5D2098C63C346DB8ABAB74F /* libpaho-mqtt3c.so.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E9F1D77E3FC4922B6FE57FB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				5857DD03F2114B1B80538717 /* libpaho-mqtt3a.so.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCD189FFBD2149F6A66FBB99 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				34C66200B31B4DF6AF7C24F6 /* libpaho-mqtt3cs.so.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		006D720219952D00008149E2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		006D720319952D00008149E2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		00B784AF0FF439BC000DE1D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		00B784B10FF439BC000DE1D7 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		00B784B20FF439BC000DE1D7 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		010D23001C6F45C382EC64B8 /* async_client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = async_client.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/async_client.cpp"; sourceTree = "<group>"; };
+		06A4274FF94A469EA760C62B /* topic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = topic.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/topic.cpp"; sourceTree = "<group>"; };
+		0DB503F292294D8689FC665A /* async_client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = async_client.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/async_client.h"; sourceTree = "<group>"; };
+		100B1B5087D442EC85256FF5 /* StackTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StackTrace.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/StackTrace.h"; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13A4A89252E14C9AB227CC67 /* libpaho-mqtt3cs.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3cs.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3cs.so.1"; sourceTree = "<group>"; };
+		19E3C8C2DF734161BB9C5CA8 /* token.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = token.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/token.cpp"; sourceTree = "<group>"; };
+		1DC190C743BB4273B9026800 /* libpaho-mqtt3a.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3a.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3a.so.1"; sourceTree = "<group>"; };
+		23E66FA4CDD74A398BC47CC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2B409AC07F804D2985100962 /* MQTTPersistenceDefault.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTPersistenceDefault.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTPersistenceDefault.h"; sourceTree = "<group>"; };
+		31572DF8A61C49FD90A432F2 /* Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Log.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Log.h"; sourceTree = "<group>"; };
+		36ABA29E15994776B785D213 /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tree.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Tree.h"; sourceTree = "<group>"; };
+		40B262A542A24C63B689F30E /* Thread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Thread.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Thread.h"; sourceTree = "<group>"; };
+		45A9C2BEF670408B83AD78C3 /* Messages.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Messages.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Messages.h"; sourceTree = "<group>"; };
+		4A2FBE3469D54836A17FE845 /* iaction_listener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iaction_listener.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/iaction_listener.h"; sourceTree = "<group>"; };
+		4F65CBF4602344239419FA4D /* client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = client.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/client.h"; sourceTree = "<group>"; };
+		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		54C98C6618B548A2ADDBC760 /* exception.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = exception.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/exception.h"; sourceTree = "<group>"; };
+		5512C7D3B4E642F7ADDFF61A /* callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = callback.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/callback.h"; sourceTree = "<group>"; };
+		59BE9D401DC3464FA7A095C4 /* libpaho-mqtt3as.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3as.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3as.so.1"; sourceTree = "<group>"; };
+		5F9CF84BE9C248529627CFB5 /* MQTTProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTProtocol.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTProtocol.h"; sourceTree = "<group>"; };
+		65DFB0F7FA724B2C9A1DDE38 /* MQTTPacket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTPacket.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTPacket.h"; sourceTree = "<group>"; };
+		67C4A69D71B34A53885C28B1 /* MQTTPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTPersistence.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTPersistence.h"; sourceTree = "<group>"; };
+		6A379D6F1B03446491D38285 /* MQTTClientPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTClientPersistence.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTClientPersistence.h"; sourceTree = "<group>"; };
+		6BB8788FD3B64742B7339CE9 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/LinkedList.h"; sourceTree = "<group>"; };
+		6C2AEE801387417183CBEE4E /* MQTTProtocolClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTProtocolClient.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTProtocolClient.h"; sourceTree = "<group>"; };
+		7054308579B840FE81B8730A /* iclient_persistence.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = iclient_persistence.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/iclient_persistence.cpp"; sourceTree = "<group>"; };
+		7397D87BD0AD460C9260D88A /* delivery_token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = delivery_token.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/delivery_token.h"; sourceTree = "<group>"; };
+		73A077F57F0C480D96E67A14 /* ipersistable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ipersistable.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/ipersistable.h"; sourceTree = "<group>"; };
+		894290289EF141EA888E7559 /* SocketBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SocketBuffer.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/SocketBuffer.h"; sourceTree = "<group>"; };
+		8A8AACA27E584FC09ACDBFB1 /* SSLSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSLSocket.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/SSLSocket.h"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* MqttClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MqttClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F844AD1BAE34D45AA7E17CA /* topic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = topic.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/topic.h"; sourceTree = "<group>"; };
+		91D44B9CC443488FB4E3579A /* MqttClient_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = MqttClient_Prefix.pch; sourceTree = "<group>"; };
+		9BFA0C393B7D41D28307C303 /* MQTTClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTClient.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTClient.h"; sourceTree = "<group>"; };
+		9E5AFAF506E44C319331F800 /* iclient_persistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iclient_persistence.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/iclient_persistence.h"; sourceTree = "<group>"; };
+		A26E3967D90C4142895CA47B /* connect_options.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = connect_options.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/connect_options.h"; sourceTree = "<group>"; };
+		A42CD63937154D22BAF14C70 /* message.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = message.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/message.cpp"; sourceTree = "<group>"; };
+		A43E8ED9390346EEB770498A /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		A450E6AA53FE4039BF7CA74C /* MQTTAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTAsync.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTAsync.h"; sourceTree = "<group>"; };
+		B70A60BA1DB248B3B2572258 /* MQTTPacketOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTPacketOut.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTPacketOut.h"; sourceTree = "<group>"; };
+		BDA9398F490445DBB1D4081D /* MqttClientApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = MqttClientApp.cpp; path = ../src/MqttClientApp.cpp; sourceTree = "<group>"; };
+		C162EBDB548444209D1E5B32 /* cocPahoMqtt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cocPahoMqtt.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/src/cocPahoMqtt.h"; sourceTree = "<group>"; };
+		C27901C4632442A2A7DFA98C /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		C3AA390E2BC8430BAE53E00C /* Heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Heap.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Heap.h"; sourceTree = "<group>"; };
+		C600C948BC294EE0B4480DE3 /* message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = message.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/message.h"; sourceTree = "<group>"; };
+		C8C99E601A25436CB6428E53 /* utf-8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "utf-8.h"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/utf-8.h"; sourceTree = "<group>"; };
+		D27FC0FF9275489DA42E4A6C /* libpaho-mqtt3c.so.1 */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; name = "libpaho-mqtt3c.so.1"; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3c.so.1"; sourceTree = "<group>"; };
+		D51F645E13294AF7AAC3C821 /* token.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = token.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/mqtt/token.h"; sourceTree = "<group>"; };
+		E059689D45464428BD97ECDF /* Clients.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Clients.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Clients.h"; sourceTree = "<group>"; };
+		ED67629C78904852B3A95B98 /* MQTTProtocolOut.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MQTTProtocolOut.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/MQTTProtocolOut.h"; sourceTree = "<group>"; };
+		EF761DA55AE841B29CC07A87 /* client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = client.cpp; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src/client.cpp"; sourceTree = "<group>"; };
+		FDF1CFFF28AA4BF8B4B4F8A8 /* Socket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Socket.h; path = "../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/src/Socket.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006D720419952D00008149E2 /* AVFoundation.framework in Frameworks */,
+				006D720519952D00008149E2 /* CoreMedia.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
+				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
+				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
+				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
+				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				00B9955A1B128DF400A5C623 /* IOKit.framework in Frameworks */,
+				00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				78BA641565874563BB25E6D4 /* CoC-PahoMqtt */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9398F490445DBB1D4081D /* MqttClientApp.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				006D720219952D00008149E2 /* AVFoundation.framework */,
+				006D720319952D00008149E2 /* CoreMedia.framework */,
+				00B784AF0FF439BC000DE1D7 /* Accelerate.framework */,
+				00B784B00FF439BC000DE1D7 /* AudioToolbox.framework */,
+				00B784B10FF439BC000DE1D7 /* AudioUnit.framework */,
+				00B784B20FF439BC000DE1D7 /* CoreAudio.framework */,
+				5323E6B10EAFCA74003A9687 /* CoreVideo.framework */,
+				0091D8F80E81B9330029341E /* OpenGL.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				00B995581B128DF400A5C623 /* IOKit.framework */,
+				00B995591B128DF400A5C623 /* IOSurface.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* MqttClient.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		237DA53A01914C0992A2AE01 /* PahoMqttCpp */ = {
+			isa = PBXGroup;
+			children = (
+				4FCBA892ADC74A7293A30683 /* src */,
+			);
+			name = PahoMqttCpp;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* MqttClient */ = {
+			isa = PBXGroup;
+			children = (
+				01B97315FEAEA392516A2CEA /* Blocks */,
+				29B97315FDCFA39411CA2CEA /* Headers */,
+				080E96DDFE201D6D7F000001 /* Source */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = MqttClient;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				C27901C4632442A2A7DFA98C /* Resources.h */,
+				91D44B9CC443488FB4E3579A /* MqttClient_Prefix.pch */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A43E8ED9390346EEB770498A /* CinderApp.icns */,
+				23E66FA4CDD74A398BC47CC6 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		383190ADAF01496198D18837 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				5AC99C9F76E24D2FB0369652 /* PahoMqttC */,
+				237DA53A01914C0992A2AE01 /* PahoMqttCpp */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		4FCBA892ADC74A7293A30683 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				010D23001C6F45C382EC64B8 /* async_client.cpp */,
+				EF761DA55AE841B29CC07A87 /* client.cpp */,
+				7054308579B840FE81B8730A /* iclient_persistence.cpp */,
+				A42CD63937154D22BAF14C70 /* message.cpp */,
+				19E3C8C2DF734161BB9C5CA8 /* token.cpp */,
+				06A4274FF94A469EA760C62B /* topic.cpp */,
+				7324890520E14898BF13F0A8 /* mqtt */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		5AC99C9F76E24D2FB0369652 /* PahoMqttC */ = {
+			isa = PBXGroup;
+			children = (
+				95A2C3CAC4484CABB3717034 /* src */,
+				E7578130D59D42BFBA4F13BD /* libs */,
+			);
+			name = PahoMqttC;
+			sourceTree = "<group>";
+		};
+		7324890520E14898BF13F0A8 /* mqtt */ = {
+			isa = PBXGroup;
+			children = (
+				0DB503F292294D8689FC665A /* async_client.h */,
+				5512C7D3B4E642F7ADDFF61A /* callback.h */,
+				4F65CBF4602344239419FA4D /* client.h */,
+				A26E3967D90C4142895CA47B /* connect_options.h */,
+				7397D87BD0AD460C9260D88A /* delivery_token.h */,
+				54C98C6618B548A2ADDBC760 /* exception.h */,
+				4A2FBE3469D54836A17FE845 /* iaction_listener.h */,
+				9E5AFAF506E44C319331F800 /* iclient_persistence.h */,
+				73A077F57F0C480D96E67A14 /* ipersistable.h */,
+				C600C948BC294EE0B4480DE3 /* message.h */,
+				D51F645E13294AF7AAC3C821 /* token.h */,
+				8F844AD1BAE34D45AA7E17CA /* topic.h */,
+			);
+			name = mqtt;
+			sourceTree = "<group>";
+		};
+		78BA641565874563BB25E6D4 /* CoC-PahoMqtt */ = {
+			isa = PBXGroup;
+			children = (
+				9B349F1749CF4521BC1850AF /* src */,
+				383190ADAF01496198D18837 /* libs */,
+			);
+			name = "CoC-PahoMqtt";
+			sourceTree = "<group>";
+		};
+		95A2C3CAC4484CABB3717034 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E059689D45464428BD97ECDF /* Clients.h */,
+				C3AA390E2BC8430BAE53E00C /* Heap.h */,
+				6BB8788FD3B64742B7339CE9 /* LinkedList.h */,
+				31572DF8A61C49FD90A432F2 /* Log.h */,
+				45A9C2BEF670408B83AD78C3 /* Messages.h */,
+				A450E6AA53FE4039BF7CA74C /* MQTTAsync.h */,
+				9BFA0C393B7D41D28307C303 /* MQTTClient.h */,
+				6A379D6F1B03446491D38285 /* MQTTClientPersistence.h */,
+				65DFB0F7FA724B2C9A1DDE38 /* MQTTPacket.h */,
+				B70A60BA1DB248B3B2572258 /* MQTTPacketOut.h */,
+				67C4A69D71B34A53885C28B1 /* MQTTPersistence.h */,
+				2B409AC07F804D2985100962 /* MQTTPersistenceDefault.h */,
+				5F9CF84BE9C248529627CFB5 /* MQTTProtocol.h */,
+				6C2AEE801387417183CBEE4E /* MQTTProtocolClient.h */,
+				ED67629C78904852B3A95B98 /* MQTTProtocolOut.h */,
+				FDF1CFFF28AA4BF8B4B4F8A8 /* Socket.h */,
+				894290289EF141EA888E7559 /* SocketBuffer.h */,
+				8A8AACA27E584FC09ACDBFB1 /* SSLSocket.h */,
+				100B1B5087D442EC85256FF5 /* StackTrace.h */,
+				40B262A542A24C63B689F30E /* Thread.h */,
+				36ABA29E15994776B785D213 /* Tree.h */,
+				C8C99E601A25436CB6428E53 /* utf-8.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		9B349F1749CF4521BC1850AF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C162EBDB548444209D1E5B32 /* cocPahoMqtt.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		E2E8E26B0E994AF48A457431 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				1DC190C743BB4273B9026800 /* libpaho-mqtt3a.so.1 */,
+				59BE9D401DC3464FA7A095C4 /* libpaho-mqtt3as.so.1 */,
+				D27FC0FF9275489DA42E4A6C /* libpaho-mqtt3c.so.1 */,
+				13A4A89252E14C9AB227CC67 /* libpaho-mqtt3cs.so.1 */,
+			);
+			name = osx;
+			sourceTree = "<group>";
+		};
+		E7578130D59D42BFBA4F13BD /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				E2E8E26B0E994AF48A457431 /* osx */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* MqttClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MqttClient" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				2E9F1D77E3FC4922B6FE57FB /* CopyFiles */,
+				08832C14E94D4609B4A98DF4 /* CopyFiles */,
+				25714CB710D24A4CBB629B03 /* CopyFiles */,
+				DCD189FFBD2149F6A66FBB99 /* CopyFiles */,
+				6B9962601CD9796E009F49E7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MqttClient;
+			productInstallPath = "$(HOME)/Applications";
+			productName = MqttClient;
+			productReference = 8D1107320486CEB800E47090 /* MqttClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MqttClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* MqttClient */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* MqttClient */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140B80CA291746AE8EE99CE0 /* CinderApp.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B9962601CD9796E009F49E7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change libpaho-mqtt3a.so.1 @executable_path/libpaho-mqtt3a.so.1 \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"\ninstall_name_tool -change libpaho-mqtt3as.so.1 @executable_path/libpaho-mqtt3as.so.1 \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"\ninstall_name_tool -change libpaho-mqtt3c.so.1 @executable_path/libpaho-mqtt3c.so.1 \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"\ninstall_name_tool -change libpaho-mqtt3cs.so.1 @executable_path/libpaho-mqtt3cs.so.1 \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF9C67A3AB1F4EDA979268B5 /* MqttClientApp.cpp in Sources */,
+				91F4B8B50D9C47DC83D59B2E /* async_client.cpp in Sources */,
+				501D55719A064C6F9921F47D /* client.cpp in Sources */,
+				7A8BF35DA826440487CBDBDA /* iclient_persistence.cpp in Sources */,
+				9FC74F7D8CF04EE99B778F22 /* message.cpp in Sources */,
+				D2DB7BDC402A4193BAA1D1D4 /* token.cpp in Sources */,
+				225431C1E19D4D7F970FDEEC /* topic.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MqttClient_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/lib/osx\"";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3a.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3as.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3c.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3cs.so.1\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = MqttClient;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_FAST_MATH = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MqttClient_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"NDEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/lib/osx\"";
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder.a\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3a.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3as.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3c.so.1\"",
+					"\"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttC/libs/osx/libpaho-mqtt3cs.so.1\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.libcinder.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = MqttClient;
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../../../../../_cinder/Cinder.git;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				ENABLE_TESTABILITY = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src\"";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CINDER_PATH = ../../../../../_cinder/Cinder.git;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/include\" ../include \"../../../../../_cinder/Cinder.git/blocks/coc-pahomqtt/libs/PahoMqttCpp/src\"";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MqttClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MqttClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
