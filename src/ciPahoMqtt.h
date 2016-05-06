@@ -12,6 +12,7 @@
 //
 
 /*
+ * Example of connecting call back:
  * cbOnMessageArrived =  getSignalOnMessageArrived().connect( std::bind( &MyClass::onMessageArrived, this, std::placeholders::_1, std::placeholders::_2 ) );
  */
 

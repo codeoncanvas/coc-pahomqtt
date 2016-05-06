@@ -1,3 +1,16 @@
+//
+//	    ┌─┐╔═╗┌┬┐┌─┐
+//      │  ║ ║ ││├┤
+//      └─┘╚═╝─┴┘└─┘
+//	 ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
+//	 │  ├─┤║║║└┐┌┘├─┤└─┐
+//	 └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
+//	http://CodeOnCanvas.cc
+//
+// Created by Rene Christen on 4/05/2016.
+// Copyright (c) 2016, Code on Canvas Pty Ltd
+//
+
 #pragma once
 
 #include "cocPahoMqtt.h"
@@ -14,7 +27,7 @@
 
 namespace coc {
 
-void cocPahoMqtt::connect( std::string address, int port, std::string clientId ) {
+bool cocPahoMqtt::connect( std::string address, int port, std::string clientId ) {
 
 
 	std::string addressStr = address + ":" + ci::toString(port);
@@ -45,6 +58,8 @@ void cocPahoMqtt::connect( std::string address, int port, std::string clientId )
 	catch ( ... ) {
 		CI_LOG_E( "Connect Failed" );
 	}
+
+	mClient->is_connected();
 }
 
 void cocPahoMqtt::disconnect() {
@@ -52,6 +67,8 @@ void cocPahoMqtt::disconnect() {
 	mClient->disconnect();
 	CI_LOG_I( "Disonnected" );
 }
+
+bool cocPahoMqtt::getIsConnected() { return mClient->is_connected(); }
 
 
 void cocPahoMqtt::sendMessage( std::string topic, mqtt::message_ptr pubmsg ) {
@@ -64,6 +81,18 @@ void cocPahoMqtt::sendMessage( std::string topic, mqtt::message_ptr pubmsg ) {
 	mClient->publish(topic.c_str(), pubmsg);
 	CI_LOG_V("Sent message");
 
+}
+
+void cocPahoMqtt::subscribe( std::string topic )
+{
+	if (!mClient->is_connected()) return;
+	mClient->subscribe( topic, QOS );
+}
+
+void cocPahoMqtt::unsubscribe( std::string topic )
+{
+	if (!mClient->is_connected()) return;
+	mClient->unsubscribe( topic );
 }
 
 

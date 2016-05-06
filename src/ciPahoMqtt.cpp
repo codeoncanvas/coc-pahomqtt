@@ -16,6 +16,8 @@ namespace coc {
 
 void ciPahoMqtt::connection_lost(const std::string& cause)
 {
+	lock();
+
 	if (!cause.empty()) {
 		CI_LOG_E( "Connection lost, cause: " << cause);
 	}
@@ -24,10 +26,13 @@ void ciPahoMqtt::connection_lost(const std::string& cause)
 	}
 
 	signalOnConnectionLost.emit(cause);
+
+	unlock();
 }
 
 void ciPahoMqtt::message_arrived(const std::string& topic, mqtt::message_ptr msg)
 {
+	lock();
 
 	if ( getIsVerbose() ) {
 		CI_LOG_V("Message arrived\n"
@@ -37,19 +42,26 @@ void ciPahoMqtt::message_arrived(const std::string& topic, mqtt::message_ptr msg
 
 	signalOnMessageArrived.emit(topic,msg);
 
+	unlock();
+
 }
 
 void ciPahoMqtt::delivery_complete(mqtt::idelivery_token_ptr tok)
 {
+	lock();
 
 	if ( getIsVerbose() ) {
 		CI_LOG_V( "[Delivery complete for token: " << (tok ? tok->get_message_id() : - 1) << "]" );
 	}
 	signalOnDeliveryComplete.emit(tok);
+
+	unlock();
 }
 
 void ciPahoMqtt::on_failure(const mqtt::itoken& tok)
 {
+	lock();
+
 	if (tok.get_message_id() != 0) {
 		CI_LOG_E("Failure, (token: " << tok.get_message_id() << ")");
 	}
@@ -57,10 +69,14 @@ void ciPahoMqtt::on_failure(const mqtt::itoken& tok)
 		CI_LOG_E("Failure");
 	}
 	signalOnFailure.emit(tok);
+
+	unlock();
 }
 
 void ciPahoMqtt::on_success(const mqtt::itoken& tok)
 {
+	lock();
+
 	if ( getIsVerbose() ) {
 		CI_LOG_V("Success:");
 		if (tok.get_message_id() != 0)
@@ -69,6 +85,8 @@ void ciPahoMqtt::on_success(const mqtt::itoken& tok)
 			CI_LOG_V("\ttoken topic: '" << tok.get_topics()[0] << "', ...");
 	}
 	signalOnSuccess.emit(tok);
+
+	unlock();
 }
 
 }//namespace coc

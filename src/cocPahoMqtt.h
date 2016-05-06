@@ -1,12 +1,22 @@
+//
+//	    ┌─┐╔═╗┌┬┐┌─┐
+//      │  ║ ║ ││├┤
+//      └─┘╚═╝─┴┘└─┘
+//	 ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
+//	 │  ├─┤║║║└┐┌┘├─┤└─┐
+//	 └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
+//	http://CodeOnCanvas.cc
+//
+// Created by Rene Christen on 4/05/2016.
+// Copyright (c) 2016, Code on Canvas Pty Ltd
+//
+
 #pragma once
 
 #include "cinder/Log.h"
 #include "cinder/Utilities.h"
 
 #include "client.h"
-#include "connect_options.h"
-#include "message.h"
-#include "exception.h"
 
 
 namespace coc {
@@ -16,16 +26,28 @@ namespace coc {
     {
         
     public:
-        
-        void connect( std::string address, int port, std::string clientId );
+
+        bool setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
+        bool getIsVerbose() { return mIsVerbose; }
+
+        bool connect( std::string address, int port, std::string clientId );
         void disconnect();
+        bool getIsConnected();
+
+        void subscribe( std::string topic );
+        void unsubscribe( std::string topic );
         
         void sendMessage( std::string topic, mqtt::message_ptr pubmsg );
         void sendMessage( std::string topic, std::string payload );
 
-        bool setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
-        bool getIsVerbose() { return mIsVerbose; }
         
+    protected:
+
+        //not using try_lock, blocking:
+        void lock() { mMutex.lock(); }
+//        bool lock() { mMutex.try_lock(); }
+        void unlock() { mMutex.unlock(); }
+
     private:
         
         // CALLBACKS
@@ -38,6 +60,7 @@ namespace coc {
 
         mqtt::client    *mClient = nullptr;
         bool            mIsVerbose = false;
+        std::mutex      mMutex;
 
     };
 }
