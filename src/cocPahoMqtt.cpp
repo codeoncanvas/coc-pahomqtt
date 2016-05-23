@@ -59,7 +59,7 @@ bool cocPahoMqtt::connect( std::string address, int port, std::string clientId )
 		CI_LOG_E( "Connect Failed" );
 	}
 
-	mClient->is_connected();
+	return mClient->is_connected();
 }
 
 void cocPahoMqtt::disconnect() {

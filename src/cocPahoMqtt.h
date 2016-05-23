@@ -27,7 +27,7 @@ namespace coc {
         
     public:
 
-        bool setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
+        void setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
         bool getIsVerbose() { return mIsVerbose; }
 
         bool connect( std::string address, int port, std::string clientId );

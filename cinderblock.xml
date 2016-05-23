@@ -41,19 +41,25 @@
 	<platform os="msw">
 		
 		<includePath system="false">src</includePath>
+		<includePath system="false">libs/PahoMqttC/src</includePath>
 		<includePath system="false">libs/PahoMqttCpp/src/mqtt</includePath>
 
 		<libraryPath>libs/PahoMqttC/win</libraryPath>
 
-		<buildCopy>libs/PahoMqttC/libs/win/libpaho-mqtt3a.dll</buildCopy>
-		<buildCopy>libs/PahoMqttC/libs/win/libpaho-mqtt3as.dll</buildCopy>
-		<buildCopy>libs/PahoMqttC/libs/win/libpaho-mqtt3c.dll</buildCopy>
-		<buildCopy>libs/PahoMqttC/libs/win/libpaho-mqtt3cs.dll</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3a.dll</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3as.dll</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3c.dll</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3cs.dll</buildCopy>
 
-		<staticLibrary>libs/PahoMqttC/libs/win/libpaho-mqtt3a.dll</staticLibrary>
-		<staticLibrary>libs/PahoMqttC/libs/win/libpaho-mqtt3as.dll</staticLibrary>
-		<staticLibrary>libs/PahoMqttC/libs/win/libpaho-mqtt3c.dll</staticLibrary>
-		<staticLibrary>libs/PahoMqttC/libs/win/libpaho-mqtt3cs.dll</staticLibrary>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3a.lib</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3as.lib</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3c.lib</buildCopy>
+		<buildCopy>libs/PahoMqttC/libs/win/paho-mqtt3cs.lib</buildCopy>
+
+ 		<staticLibrary>libs/PahoMqttC/libs/win/paho-mqtt3a.lib</staticLibrary>
+		<staticLibrary>libs/PahoMqttC/libs/win/paho-mqtt3as.lib</staticLibrary>
+		<staticLibrary>libs/PahoMqttC/libs/win/paho-mqtt3c.lib</staticLibrary>
+		<staticLibrary>libs/PahoMqttC/libs/win/paho-mqtt3cs.lib</staticLibrary>
 
 
 	</platform>
