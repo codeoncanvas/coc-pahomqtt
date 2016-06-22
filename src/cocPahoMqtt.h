@@ -1,15 +1,21 @@
-//
-//	    ┌─┐╔═╗┌┬┐┌─┐
-//      │  ║ ║ ││├┤
-//      └─┘╚═╝─┴┘└─┘
-//	 ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
-//	 │  ├─┤║║║└┐┌┘├─┤└─┐
-//	 └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
-//	http://CodeOnCanvas.cc
-//
-// Created by Rene Christen on 4/05/2016.
-// Copyright (c) 2016, Code on Canvas Pty Ltd
-//
+/**
+ *
+ *      ┌─┐╔═╗┌┬┐┌─┐
+ *      │  ║ ║ ││├┤
+ *      └─┘╚═╝─┴┘└─┘
+ *   ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
+ *   │  ├─┤║║║└┐┌┘├─┤└─┐
+ *   └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
+ *
+ * Copyright (c) 2016 Code on Canvas Pty Ltd, http://CodeOnCanvas.cc
+ *
+ * This software is distributed under the MIT license
+ * https://tldrlegal.com/license/mit-license
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code
+ *
+ **/
 
 #pragma once
 
@@ -20,11 +26,11 @@
 
 
 namespace coc {
-    
+
     class cocPahoMqtt : public virtual mqtt::callback,
                         public virtual mqtt::iaction_listener
     {
-        
+
     public:
 
         void setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
@@ -36,11 +42,11 @@ namespace coc {
 
         void subscribe( std::string topic );
         void unsubscribe( std::string topic );
-        
+
         void sendMessage( std::string topic, mqtt::message_ptr pubmsg );
         void sendMessage( std::string topic, std::string payload );
 
-        
+
     protected:
 
         //not using try_lock, blocking:
@@ -49,7 +55,7 @@ namespace coc {
         void unlock() { mMutex.unlock(); }
 
     private:
-        
+
         // CALLBACKS
 
         virtual void connection_lost(const std::string& cause){};
