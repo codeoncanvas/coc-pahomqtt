@@ -1,15 +1,21 @@
-//
-//	    ┌─┐╔═╗┌┬┐┌─┐
-//      │  ║ ║ ││├┤
-//      └─┘╚═╝─┴┘└─┘
-//	 ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
-//	 │  ├─┤║║║└┐┌┘├─┤└─┐
-//	 └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
-//	http://CodeOnCanvas.cc
-//
-// Created by Rene Christen on 4/05/2016.
-// Copyright (c) 2016, Code on Canvas Pty Ltd
-//
+/**
+ *
+ *      ┌─┐╔═╗┌┬┐┌─┐
+ *      │  ║ ║ ││├┤
+ *      └─┘╚═╝─┴┘└─┘
+ *   ┌─┐┌─┐╔╗╔┬  ┬┌─┐┌─┐
+ *   │  ├─┤║║║└┐┌┘├─┤└─┐
+ *   └─┘┴ ┴╝╚╝ └┘ ┴ ┴└─┘
+ *
+ * Copyright (c) 2016 Code on Canvas Pty Ltd, http://CodeOnCanvas.cc
+ *
+ * This software is distributed under the MIT license
+ * https://tldrlegal.com/license/mit-license
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code
+ *
+ **/
 
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
@@ -57,12 +63,12 @@ void MqttClientApp::setup()
     mqtt.connect(ADDRESS,PORT,CLIENTID);
 
     mqtt.subscribe( TOPIC_RECEIVE );
-    
+
     mqtt::message_ptr pubmsg = std::make_shared<mqtt::message>(PAYLOAD1);
     mqtt.sendMessage( TOPIC_SEND, pubmsg);
     mqtt.sendMessage( TOPIC_SEND, PAYLOAD2);
 
-    
+
 }
 
 void MqttClientApp::mouseDown( MouseEvent event )
