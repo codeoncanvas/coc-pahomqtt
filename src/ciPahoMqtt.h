@@ -24,17 +24,6 @@
 
 #pragma once
 
-#ifdef CINDER_MSW
-
-//#include <boost/config.hpp>
-
-#ifdef _NOEXCEPT
-#define noexcept _NOEXCEPT
-#endif
-
-#endif
-
-
 #include "cinder/Signals.h"
 #include "cocPahoMqtt.h"
 
