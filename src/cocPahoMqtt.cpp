@@ -33,11 +33,16 @@
 
 namespace coc {
 
-bool cocPahoMqtt::connect( std::string address, int port, std::string clientId ) {
-
+bool cocPahoMqtt::connect( std::string address, int port, std::string clientId, std::string persistDir ) {
 
 	std::string addressStr = address + ":" + ci::toString(port);
-	mClient = new mqtt::client(addressStr.c_str(), clientId.c_str() );
+	if (persistDir.length()) {
+		mPersistDir = persistDir;
+		mClient = new mqtt::client(addressStr.c_str(), clientId.c_str(), mPersistDir );
+	}
+	else {
+		mClient = new mqtt::client(addressStr.c_str(), clientId.c_str() );
+	}
 
 
 	//CALLBACKS
@@ -71,7 +76,8 @@ bool cocPahoMqtt::connect( std::string address, int port, std::string clientId )
 void cocPahoMqtt::disconnect() {
 	if (!mClient->is_connected()) return;
 	mClient->disconnect();
-	CI_LOG_I( "Disonnected" );
+	mClient->close();
+	CI_LOG_I( "Disonnected/Closed" );
 }
 
 bool cocPahoMqtt::getIsConnected() { return mClient->is_connected(); }

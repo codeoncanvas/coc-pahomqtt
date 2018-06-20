@@ -36,7 +36,7 @@ namespace coc {
         void setIsVerbose( bool _b = true ) { mIsVerbose = _b; }
         bool getIsVerbose() { return mIsVerbose; }
 
-        bool connect( std::string address, int port, std::string clientId );
+        bool connect( std::string address, int port, std::string clientId, std::string persistDir = "" );
         void disconnect();
         bool getIsConnected();
 
@@ -67,6 +67,7 @@ namespace coc {
         mqtt::client    *mClient = nullptr;
         bool            mIsVerbose = false;
         std::mutex      mMutex;
+        std::string     mPersistDir = "";
 
     };
 }
